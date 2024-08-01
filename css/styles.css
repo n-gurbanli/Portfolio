@@ -1,0 +1,933 @@
+/* 1. GENERAL */
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
+  }
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-color);
+    margin: 0;       
+    box-sizing: border-box;
+}
+
+.menu-toggle {
+    display: none;
+  }
+
+img {
+    max-width:100%;
+    height:auto; 
+  }
+
+:root {
+    --primary-color: #343853; 
+    --secondary-color: #545DAA; 
+    --accent-color: #87589B; 
+}
+
+/* 2. HEADER */
+.complete-hero {
+    display: flex;
+    padding-left: 6.25em;
+    padding-right: 6.25em;
+    margin-bottom: 4.375em;
+    
+}
+
+.right-side {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding-left: 100px;
+    padding-right: 6.25px;
+    padding-top: 45px;
+    box-sizing: border-box; 
+}
+
+#main-navigation {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.12em;
+    font-weight: 400;
+    list-style: none;
+    gap: 1.875em;
+    margin-bottom: 1em; 
+    padding: 0px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.menu a:hover {
+    color: var(--accent-color);
+}
+
+.menu li:hover {
+    transform: scale(1.2);
+}
+
+#site-name {
+    display: flex;
+    align-items: flex-end;
+}
+
+#logo img {
+    max-height: 40px; 
+    margin-left: 50px;
+}
+
+.bio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2.5em;
+}
+
+.bio h2 {
+    font-family: "Inconsolata", sans-serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 0.3em;
+}
+
+.bio h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 3.43em;
+    color: var(--primary-color);
+    margin: 0.5em 0; 
+}
+
+.bio p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.125em;
+    color: var(--primary-color);
+    
+}
+
+.right-side .button {
+    display: block;
+    max-width: 6.25em;
+    padding: 0.5em;
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #fff;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 3em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.right-side .button:hover {
+    background-color: var(--accent-color); 
+}
+
+/* 3. "Why Choose Me" section */
+
+#why-choose-me {
+    background-color: var(--primary-color);
+    color: white;
+    padding-left: 6.25em;
+    padding-right: 6.25em;
+    padding-top: 3.75em;
+    padding-bottom: 3.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+#my-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+    gap: 3em; 
+    
+}
+
+.my-advantages {
+    flex: 1 1 calc(33.333% - 2em); 
+    color: white;
+    padding: 4em;
+    padding-top: 1em;
+    text-align: center; 
+    box-sizing: border-box; 
+    
+}
+
+.my-advantages img {
+    max-width: 100%; 
+    height: auto; 
+    padding: 2em;
+}
+
+.my-advantages h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.5625em;
+    margin: 0.5em 0; 
+}
+
+#why-choose-me h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+
+}
+
+.my-advantages p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1em; 
+    margin: 1em 0; 
+}
+
+#why-choose-me .button {
+    display: block;
+    padding: 0.5em;
+    padding-left: 1.2em;
+    padding-right: 1.2em; /*I tried doing max-width for the button, but id didnt work*/
+    font-size: 1.5625em;
+    font-weight: 300;
+    color: #fff;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 3em;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+#why-choose-me .button:hover {
+    background-color: var(--accent-color); 
+}
+
+
+/* 4. "Services" section */
+
+#services {
+    padding-left: 6.25em; 
+    padding-right: 6.25em;
+    padding-top: 3.75em; 
+    padding-bottom: 3.75em;
+    background-color: #f9f9f9; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-bottom: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+#service-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 6em; 
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 2em; 
+}
+
+.service img {
+    
+    height: auto;
+    
+}
+
+.service-content {
+    flex: 1;
+    
+}
+
+.service-content h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.875em;
+    font-weight: 700;
+    color: var(--secondary-color)
+}
+
+.service-content p {
+    padding-right: 6em;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    font-size: 1.25em;
+    font-weight: 500;
+
+}
+
+.service-content .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #fff;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 3em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.service-content .button:hover {
+    background-color: var(--accent-color);
+}
+
+.reversed  {
+    text-align: right;
+    
+}
+
+.reversed p {
+    margin-left: 5em; 
+    margin-right: 0; 
+    padding-right: 0; 
+    padding-left: 0; 
+    border: none; 
+}
+
+
+/* 5. "My Works" section */
+#my-works {
+    
+    text-align: center;
+    background-color: var(--primary-color);
+    padding-bottom: 4em;
+    
+}
+
+.works-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 6em;
+    
+    
+}
+
+#work1, #work2, #work3 {
+    background-color: white;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#my-works h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: white;
+    padding-top: 2em;
+}
+.work h5 {
+    font-size: 1.25em;
+    font-weight: 600;
+    padding: 0em;
+}
+
+#work p {
+    font-size: 1.25em;
+    font-weight: 300;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#my-works .button {
+    padding: 0.5em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    font-size: 1.5625em;
+    font-weight: 300;
+    color: #fff;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 3em;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    margin-bottom: 4em;
+}
+
+/* 6. Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.last-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 0 20px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5625em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+    
+}
+
+.form-container button {
+    display: inline-block;
+    font-size: 0.875em;
+    font-weight: 300;
+    padding: 0.5em;
+    color: #fff;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 3em;
+    text-align: center;
+    transition: background-color 0.3s;
+    border: 0;
+}
+
+.form-container button:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* CSS media queries */
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .complete-hero {
+        display: flex;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 2em;
+        margin: 0 auto;
+        
+    }
+    .profile-picture {
+       width: 310px; 
+       height: 392px;
+        
+        
+    }
+
+    .right-side {
+        padding-left: 2em;
+        padding-right: 6em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.12em;
+        font-weight: 400;
+        list-style: none;
+        gap: 1em;
+        margin-bottom: 1em; 
+        padding: 0px;
+    }
+
+    .bio {
+        padding: 0;
+    }
+
+    .bio h1 {
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .bio h2 {
+        font-size: 20px;
+        padding-right: 10em;
+    }
+
+    .bio p {
+        font-size: 0.875em;
+        padding: 0;
+    }
+
+
+    /*choose me section*/
+    #why-choose-me {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    #my-advantages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: space-between;
+    }
+
+    .my-advantages {
+        flex: 1 1 calc(50% - 1em); 
+        max-width: calc(50% - 1em); 
+    }
+
+    .learning-adaptability {
+        flex: 1 1 100%; 
+        max-width: 100%; 
+    }
+    
+    .my-advantages img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button {
+        display: block;
+        margin-top: 2em; 
+    }
+
+    /*services section*/
+
+    #service-columns {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 0em;
+        margin: 0;
+    }
+
+    
+    #services {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    #services h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 2.5em;
+        padding-bottom: 1.5em;
+        letter-spacing: 0.1em;
+        text-align: center; 
+    }
+    
+    #service-columns {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 2em;
+        width: 100%; 
+    }
+    
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 1em;
+        text-align: center; 
+        width: 100%; 
+    }
+    
+    .service img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .service-content {
+        padding: 0;
+        text-align: center; 
+    }
+    
+    .service-content .button {
+        margin-top: 1em;
+    }
+
+    .service-content p {
+        padding-right: 3em;
+        padding-left: 3em;
+        padding-top: 2em;
+        padding-bottom: 0.5em;
+        font-size: 1.25em;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .reversed p {
+        margin-left: 0; 
+        margin-right: 0; 
+        padding-right: 3em; 
+        padding-left: 3em; 
+        border: none; 
+    }
+    /*my works section*/
+    .works-container {
+        flex-direction: column;
+        padding: 2em; 
+    }
+
+    #work1, #work2 {
+        width: 100%; 
+    }
+
+    #work1 {
+        order: 1; 
+    }
+
+    #work2 {
+        order: 3; 
+    }
+
+    #work3 {
+        order: 2; 
+        margin: 1em 0; 
+    }
+
+    
+    #work img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    #work h5, #work p {
+        text-align: center;
+    }
+    
+    
+    
+    #my-works .button {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+        
+}
+
+    
+
+/* PHONE */
+@media screen and (max-width: 480px) {
+    .complete-hero {
+        flex-direction: column; 
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 2em;
+        margin: 0 auto;
+    }
+
+    .profile-picture {
+        width: 60%; 
+        height: auto; 
+        margin-left: -8em; 
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .right-side {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /*
+    
+    .menu-toggle {
+        display: block;
+        background: none;
+        font-style:normal;
+        font-weight:300;
+        
+    }
+         
+    
+    .menu .show-small {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        padding: 1em;
+    } */
+    
+   
+    .bio {
+        padding: 0;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio h1 {
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .bio h2 {
+        font-size: 1.5em;
+        padding-right: 0;
+    }
+
+    .bio p {
+        font-size: 0.875em;
+        padding: 0;
+    }
+
+    /* "Why Choose Me" section */
+    #why-choose-me {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    #why-choose-me h2 {
+        
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+        
+    
+    }
+
+    #my-advantages {
+        display: flex;
+        flex-direction: column; 
+        gap: 1em;
+        align-items: center; 
+    }
+
+    .my-advantages {
+        flex: 1 1 100%; 
+        max-width: 100%; 
+        text-align: center; 
+    }
+
+    .my-advantages img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button {
+        display: block;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    /* "Services" section */
+    #services {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background-color: #f9f9f9; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #services h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.75em; 
+        padding-bottom: 1em;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    #service-columns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        width: 100%;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .service img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .service-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .service-content .button {
+        margin-top: 1em;
+    }
+
+    .service-content p {
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        font-size: 1em; 
+        font-weight: 500;
+    }
+
+    .reversed p {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 2em;
+        padding-left: 2em;
+        border: none;
+    }
+
+    /* "My Works" section */
+    #my-works {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #works-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding-bottom: 2em;
+    }
+
+    #my-works h2 {
+        
+        font-size: 1.3em;
+        
+    }
+
+    .first-row {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 1em;
+        width: 100%;
+    }
+
+    #work1, #work2, #work3 {
+        box-sizing: border-box;
+        max-width: 100%; 
+    }
+
+    #work img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #work h5, #work p {
+        text-align: center;
+    }
+
+    
+
+    #my-works .button {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    /* footer section */
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+
+    .last-line {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
